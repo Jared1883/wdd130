@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jared's Portal Page</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <!-- Somehow Make this Scroll Down as You Move-->
+        <div id="title-block">
+            <a href=""><img id="logo" src="images/Ponyo Logo.png" alt="Ponyo in the Ocean"></a>
+            <a href=""><h1 id="title">Jared's Portal Page</h1></a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="wwr/index.html">WWR</a>
+            <a href="ICE.html">ICE</a>
+            <a href="aboutme.html">About Me</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Make the form pop out when you scroll over it.
+         Alternatively make it a small button like a chat or something idk -->
+        <form id="slide-form" action="#" method="post" autocomplete="on">
+            <button type="button" id="closeBtn">X</button>
+
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Gender:</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+
+            <section>
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label class="onetothree" for="newsletter">Subscribe to newsletter</label>
+            </section>
+
+            <section>
+                <input type="checkbox" id="conditions" name="conditions" required>
+                <label class="onetothree" for="conditions">I acknowledge the terms and conditions</label>
+            </section>
+
+            <section>
+                <button id="submit" type="submit">Submit</button>
+            </section>
+        </form>
+
+        
+
+        <section id="mid-box">
+            <h2>About Me</h2>
+            <p>My name is Jared Gudmundson, I am a student at Brigham Young University - Idaho. I am currently studying Computer Science. </p>
+        </section>
+    </main>
+
+    <footer>
+        <ol id="social-list">
+            <li><a target="_blank" href="https://facebook.com">Facebook</a></li>
+            <li><a target="_blank" href="https://instagram.com">Instagram</a></li>
+            <li><a target="_blank" href="https://x.com">X (Formerly Twitter)</a></li>
+            <li><a target="_blank" href="https://tiktok.com">Tik Tok</a></li>
+        </ol>
+        <ul id="about-list">
+            <li><a target="_blank" href="aboutme.html">About Me</a></li>
+            <li><a target="_blank" href="#">Terms of Service</a></li>
+            <li><a target="_blank" href="#">Privacy Policy</a></li>
+            <li><a target="_blank" href="#">Something Else</a></li>
+        </ul>
+    </footer>
+    <script>
+        // Here is some Javascript to start looking forward to wdd131
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("slide-form").style.display = "none";
+         });
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Stop form from actually submitting
+
+            const formData = new FormData(form);
+            const entries = [];
+
+            for (const [key, value] of formData.entries()) {
+                if (key == "password") {
+                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                } else {
+                    entries.push(`<strong>${key}</strong>: ${value}`);
+                }
+            }
+
+            output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            `;
+                });
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2">
+
+Primary Coral — #F26B6B
+Deep Ocean Blue — #1B3C59
+Seafoam Teal — #4DA1A9
+Soft Sand Beige — #F8E9C6
+Golden Starfish — #FFD275
+

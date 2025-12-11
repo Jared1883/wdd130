@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project Report</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div id="title-block">
+                <a href=""><img id="logo" src="images/Ponyo Logo.png" alt="Ponyo in the Ocean"></a>
+                <a href=""><h1 id="title">Jared's Portal Page</h1></a>
+        </div>
+        <nav id="nav">
+            <a href="index.html">Home</a>
+            <a href="wwr/index.html">WWR</a>
+            <a href="ICE.html">ICE</a>
+            <a href="client_report.html">Client Report</a>
+        </nav>
+    </header>
+    <main>
+        <!--Put a happy little .gif in here-->
+        <h2>Final Project Report</h2>
+        <hr>
+        <h3>Client Report</h3>
+        <p></p>
+        <h3>Lead Dev Report</h3>
+        <p></p>
+        <h3>Jr. Dev Report</h3>
+        <p></p>
+        <h3>Reflection and Experiences</h3>
+        <p></p>
+    </main>
+    
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("nav").innerHTML = data;
+            })
+    })
+</script>
+</html>
