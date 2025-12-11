@@ -1,6 +1,9 @@
 /*My biggest goal with setting up this css, 
 was making it so that it would scale if I scale down the size of my screen.
 */
+* {
+    box-sizing: border-box;
+}
 html, body {
 	margin: 0;
 	padding: 0;
@@ -11,15 +14,14 @@ html, body {
 }
 body {
 	font-family: 'Quicksand', sans-serif;
-    background: lightgray;
 }
 main {
+	margin: 0;
+	padding: 30px;
 	background-image: url(../images/Ponyo\ Generic.png);
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;
-	margin: 0;
-	padding: 0;
 }
 header {
 	width: 100%;
@@ -40,6 +42,7 @@ header {
 	width: 100%;
 	padding: 5px;
 	padding-top: 0;
+	border-bottom: #F5D8A5 3px solid;
 }
 #logo {
 	height: 100px;
@@ -89,8 +92,8 @@ h2 {
     margin: 0 auto;
 	min-width: min-content;
 	max-width: fit-content;
-	padding: 0 30px;
-	padding-bottom: 15px;
+	padding: 30px;
+	border-radius: 25px;
 }
 #griddy {
     display: grid;
@@ -101,6 +104,18 @@ h2 {
 #mid-box img {
 	height: 300px;
 	width: 300px;
+}
+#reports {
+	background-color: #0b5e73;
+	padding: 15px;
+	border-radius: 15px;
+	border: black 3px solid;
+}
+#happygifs {
+	margin-bottom: 20px;
+}
+#finaltitle {
+	text-shadow: black 3px 3px;
 }
 a {
 	text-decoration: none;
@@ -121,6 +136,11 @@ form {
 }
 #slide-form:hover {
 	left: 0;
+}
+#closeBtn {
+	width: 25px;
+	text-align: center;
+	align-self: flex-end;
 }
 header, footer {
     background: #063C50;
