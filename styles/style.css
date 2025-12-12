@@ -110,6 +110,16 @@ h2 {
 	padding: 15px;
 	border-radius: 15px;
 	border: black 3px solid;
+	max-width: 1000px;
+}
+#reports h3 {
+	text-shadow: black 2px 2px;
+}
+#reports p {
+	text-shadow: black 1px 1px;
+}
+#reports a {
+	color: blue;
 }
 #happygifs {
 	margin-bottom: 20px;
